@@ -45,13 +45,3 @@
   height: 2rem;
   border: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  .header__container {
-    background: var(--black);
-    color: var(--white);
-  }
-  .logo {
-    fill: var(--lightblue);
-  }
-}
