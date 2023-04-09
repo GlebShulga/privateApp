@@ -1,0 +1,65 @@
+.hero {
+  margin-bottom: 2rem;
+  padding-top: 0;
+  grid-template-columns: 40% 1fr;
+}
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.home_text {
+  align-self: center;
+  margin: 0 auto;
+}
+
+.text {
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.25;
+  text-rendering: geometricPrecision;
+}
+
+.text span {
+  display: block;
+}
+
+.text_thin {
+  font-size: clamp(1.1rem, 3vw, 1.9rem);
+  margin: 0.5rem 0 0;
+  font-weight: 200;
+}
+
+.link_bar {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  list-style: none;
+  filter: var(--item-filter);
+}
+
+.img {
+  background: var(
+    --home-figure
+  ); // --home-figure: url(/home/podcast-dark.webp), var(--gunmetal);
+  background-size: cover;
+  background-position: center;
+  height: var(--heroImageHeight);
+  margin-bottom: calc(-1 * var(--heroImageOverflow));
+  border-radius: var(--heroImageHeight) var(--heroImageHeight) 0 0;
+  width: clamp(100px, 100%, 400px);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+@media (max-width: 1100px) {
+  .img {
+    height: auto;
+    aspect-ratio: 2/3;
+  }
+}
