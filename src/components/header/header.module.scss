@@ -24,20 +24,18 @@
   margin: 0 auto;
 }
 
-.header_level_bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0.2rem 0.5rem 0 0.5rem;
-  margin: 0 auto;
-  border-top: 0.1rem solid var(--border-lightgray);
-}
-
 .logo {
   width: 2rem;
   height: 2rem;
   border: none;
+}
+
+.link {
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+  }
 }
 
 .button {

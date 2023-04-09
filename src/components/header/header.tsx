@@ -30,12 +30,10 @@ export const Header = (): JSX.Element => {
             className={headerStyles.logo}
             alt="website logo"
           />
-          <div>
-            <Link href="/">Home</Link>
-          </div>
-          <div>
-            <Link href="/about">About Me</Link>
-          </div>
+          <Link href="/" className={headerStyles.link}>Home</Link>
+          <Link href="/about" className={headerStyles.link}>
+            About Me
+          </Link>
           <button
             onClick={() => setIsDarkMode((prevState) => !prevState)}
             className={headerStyles.button}
@@ -47,7 +45,6 @@ export const Header = (): JSX.Element => {
             />
           </button>
         </div>
-        <div className={headerStyles.header_level_bottom}></div>
       </div>
     </header>
   );
