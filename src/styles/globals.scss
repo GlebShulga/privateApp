@@ -6,6 +6,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --fontCode: "Azeret Mono", monospace;
   --heroImageHeight: 500px;
   --heroImageOverflow: 8rem;
 }
@@ -14,7 +15,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 253, 223, 161; /* a warm yellow */
   --background-end-rgb: 255, 255, 255;
-  --header-bg: #e5c494; /* a warm beige */
+  --header-bg: #ffdc94;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -25,7 +26,7 @@
     transparent 360deg
   );
   --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.8),
     rgba(255, 255, 255, 0)
   );
 
@@ -47,9 +48,12 @@
   --card-border-rgb: 153, 102, 51; /* a warmer brown */
 
   --box-shadow-color: rgb(0 0 0 / 9%);
-  --link-hover-color: #D48419;
+  --link-hover-color: #8d5710;
 
   --item-filter: none;
+
+  --tooltip-background-color: #ffe3a7;
+  --tooltip-color: #333;
 }
 
 [data-theme="dark"] {
@@ -87,6 +91,8 @@
   --link-hover-color: rgba(255, 255, 255, 0.8);
 
   --item-filter: invert(0.9);
+  --tooltip-background-color: #333;
+  --tooltip-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { Tooltip } from "../tooltip/tooltip";
+import { headerLinks } from "../../constants/headerLinks";
 import {
   LOGO_LIGHT,
   SUN,
@@ -6,9 +9,8 @@ import {
   SUN_ALT,
   MOON_ALT,
   LOGO_DARK,
-} from "./constants";
+} from "../../constants/icons";
 import headerStyles from "./header.module.scss";
-import Link from "next/link";
 
 export const Header = (): JSX.Element => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -30,20 +32,23 @@ export const Header = (): JSX.Element => {
             className={headerStyles.logo}
             alt="website logo"
           />
-          <Link href="/" className={headerStyles.link}>Home</Link>
-          <Link href="/about" className={headerStyles.link}>
-            About Me
-          </Link>
-          <button
-            onClick={() => setIsDarkMode((prevState) => !prevState)}
-            className={headerStyles.button}
-          >
-            <img
-              src={isDarkMode ? SUN : MOON}
-              className={headerStyles.logo}
-              alt={isDarkMode ? SUN_ALT : MOON_ALT}
-            />
-          </button>
+          {headerLinks.map((link) => (
+            <Link href={link.url} className={headerStyles.link} key={link.title}>
+              {link.title}
+            </Link>
+          ))}
+          <Tooltip text="Page theme toggle">
+            <button
+              onClick={() => setIsDarkMode((prevState) => !prevState)}
+              className={headerStyles.button}
+            >
+              <img
+                src={isDarkMode ? SUN : MOON}
+                className={headerStyles.logo}
+                alt={isDarkMode ? SUN_ALT : MOON_ALT}
+              />
+            </button>
+          </Tooltip>
         </div>
       </div>
     </header>

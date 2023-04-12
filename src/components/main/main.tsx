@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { socialLinks } from "./socialLinks";
+import { socialLinks } from "../../constants/socialLinks";
 import mainStyles from "./main.module.scss";
 
 export const Main = (): JSX.Element => {
