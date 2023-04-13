@@ -26,14 +26,18 @@ export const Header = (): JSX.Element => {
       className={`${headerStyles.header} ${headerStyles.header_with_shadow}`}
     >
       <div className={headerStyles.header__container}>
-        <div className={headerStyles.header_level_top}>
-          <img
+      <img
             src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
             className={headerStyles.logo}
             alt="website logo"
           />
+        <div className={headerStyles.header__links}>
           {headerLinks.map((link) => (
-            <Link href={link.url} className={headerStyles.link} key={link.title}>
+            <Link
+              href={link.url}
+              className={headerStyles.link}
+              key={link.title}
+            >
               {link.title}
             </Link>
           ))}

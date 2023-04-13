@@ -11,17 +11,18 @@
 }
 
 .header__container {
+  font-family: var(--fontCode);
   font-size: 1.6rem;
-  padding: 0 0.3rem;
-}
-
-.header_level_top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
   padding: 0.2rem 0.8rem 1rem 0.8rem;
-  margin: 0 auto;
+}
+
+.header__links {
+  display: flex;
+  justify-content: flex-end;
+
 }
 
 .logo {
@@ -31,6 +32,7 @@
 }
 
 .link {
+  margin: 0 1.5rem;
   transition: color 0.2s ease-in-out;
   &:hover {
     color: var(--link-hover-color);
