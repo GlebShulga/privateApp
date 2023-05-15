@@ -1,0 +1,22 @@
+.container {
+  font-family: var(--fontCode);
+  font-size: var(--font-size-header-footer);
+  width: 100%;
+  background-color: var(--header-bg);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.container a {
+  transition: color 0.2s;
+  color: var(--link);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    font-size: var(--font-size-header-footer-sm);
+    position: fixed;
+    bottom: 0;
+  }
+}

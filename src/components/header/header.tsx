@@ -10,7 +10,7 @@ import {
   MOON_ALT,
   LOGO_DARK,
 } from "../../constants/icons";
-import headerStyles from "./header.module.scss";
+import styles from "@component/styles/header.module.scss";
 
 export const Header = (): JSX.Element => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -22,38 +22,30 @@ export const Header = (): JSX.Element => {
   }, [isDarkMode]);
 
   return (
-    <header
-      className={`${headerStyles.header} ${headerStyles.header_with_shadow}`}
-    >
-      <div className={headerStyles.header__container}>
+    <header className={styles.container}>
       <img
-            src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
-            className={headerStyles.logo}
-            alt="website logo"
-          />
-        <div className={headerStyles.header__links}>
-          {headerLinks.map((link) => (
-            <Link
-              href={link.url}
-              className={headerStyles.link}
-              key={link.title}
-            >
-              {link.title}
-            </Link>
-          ))}
-          <Tooltip text="Page theme toggle">
-            <button
-              onClick={() => setIsDarkMode((prevState) => !prevState)}
-              className={headerStyles.button}
-            >
-              <img
-                src={isDarkMode ? SUN : MOON}
-                className={headerStyles.logo}
-                alt={isDarkMode ? SUN_ALT : MOON_ALT}
-              />
-            </button>
-          </Tooltip>
-        </div>
+        src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
+        className={styles.logo}
+        alt="website logo"
+      />
+      <div className={styles.links}>
+        {headerLinks.map((link) => (
+          <Link href={link.url} className={styles.link} key={link.title}>
+            {link.title}
+          </Link>
+        ))}
+        <Tooltip text="Page theme toggle">
+          <button
+            onClick={() => setIsDarkMode((prevState) => !prevState)}
+            className={styles.button}
+          >
+            <img
+              src={isDarkMode ? SUN : MOON}
+              className={styles.logo}
+              alt={isDarkMode ? SUN_ALT : MOON_ALT}
+            />
+          </button>
+        </Tooltip>
       </div>
     </header>
   );

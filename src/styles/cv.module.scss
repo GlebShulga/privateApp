@@ -1,0 +1,56 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.container ul {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.container li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  position: relative;
+  height: 0.2rem;
+  width: 15rem;
+  margin-top: 1rem;
+  background-color: var(--text-divider);
+}
+
+.point {
+  width: 0.7rem;
+  height: 0.7rem;
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  border-radius: 100%;
+  background-color: var(--text-divider);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-bottom: 3rem;
+  }
+}

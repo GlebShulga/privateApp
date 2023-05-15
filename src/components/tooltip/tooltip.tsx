@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from 'react';
-import tooltipStyles from "./tooltip.module.scss";
+import styles from "@component/styles/tooltip.module.scss";
 
 interface TooltipProps {
     children: ReactNode;
@@ -18,12 +18,12 @@ export const Tooltip = ({ children, text }: TooltipProps) => {
   };
 
   return (
-    <div className={tooltipStyles.tooltip_container}
+    <div className={styles.tooltip_container}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {children}
-      {showTooltip && <div className={tooltipStyles.tooltip}>{text}</div>}
+      {showTooltip && <div className={styles.tooltip}>{text}</div>}
     </div>
   );
 };

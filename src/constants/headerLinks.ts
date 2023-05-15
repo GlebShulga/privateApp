@@ -6,5 +6,9 @@ export const headerLinks = [
   {
     title: "About Me",
     url: "/about",
-  }
+  },
+  {
+    title: "CV",
+    url: "/cv",
+  },
 ];

@@ -8,7 +8,11 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   --fontCode: "Azeret Mono", monospace;
   --heroImageHeight: 500px;
+  --heroImageHeight-md: 400px;
+  --heroImageHeight-sm: 350px;
   --heroImageOverflow: 8rem;
+  --font-size-header-footer: 1.6rem;
+  --font-size-header-footer-sm: 1.1rem;
 }
 
 [data-theme="light"] {
@@ -48,12 +52,18 @@
   --card-border-hex: #996633; /* a warmer brown */
 
   --box-shadow-color: #00000015;
+  --link: #a04d66;
   --link-hover-color: #8d5710;
 
   --item-filter: none;
 
   --tooltip-background-color: #ffe3a7;
   --tooltip-color: #333;
+
+  --text-divider: #7d9e8e;
+
+  --home-figure: url(/assets/portrait_light.jpg), #f3e8e5;
+  --home-figure-sm: url(/assets/portrait_light_sm.jpg), #f3e8e5;
 }
 
 [data-theme="dark"] {
@@ -88,11 +98,17 @@
   --card-border-hex: #787878;
 
   --box-shadow-color: rgba(255, 255, 255, 0.7);
+  --link: #8fb6b0;
   --link-hover-color: rgba(255, 255, 255, 0.8);
 
   --item-filter: invert(0.9);
   --tooltip-background-color: #333;
   --tooltip-color: #fff;
+
+  --text-divider: #e45447;
+
+  --home-figure: url(/assets/portrait_dark.jpeg), #2f3834;
+  --home-figure-sm: url(/assets/portrait_dark_sm.jpg), #2f3834;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -133,6 +149,8 @@
     --item-filter: invert(0.9);
     --tooltip-background-color: #333;
     --tooltip-color: #fff;
+
+    --text-divider: #e45447;
   }
 }
 
