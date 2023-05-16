@@ -2,7 +2,6 @@ import styles from "@component/styles/about.module.scss";
 
 export default function About() {
   return (
-    <main>
       <section className={styles.container}>
         <h1>Hi, I&apos;m Gleb</h1>
         <div>
@@ -47,11 +46,7 @@ export default function About() {
             </a>
             😊
           </p>
-          {/* <p>
-            Interested in frontend and backend development.
-          </p> */}
         </div>
       </section>
-    </main>
   );
 }

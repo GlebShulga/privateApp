@@ -6,7 +6,7 @@ export const socialLinks = [
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/gleb-shulga-5b1b3b1b3/",
+    url: "https://www.linkedin.com/in/gleb-shulga/",
     iconSrc: "/assets/icon-linkedin.svg",
   },
   {

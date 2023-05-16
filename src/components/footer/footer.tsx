@@ -6,7 +6,7 @@ export const Footer = (): JSX.Element => {
       className={footerStyles.container}
     >
       © 2023 Gleb Shulga |{" "}
-      <a href="mailto:shulga_gleb@hotmail.com?subject=Hello There!&amp;body=Hi Gleb, so I was looking at your website and...">
+      <a href="https://www.linkedin.com/in/gleb-shulga/" target="_blank">
         <span>Get in touch</span>
       </a>
     </footer>
