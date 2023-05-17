@@ -106,47 +106,6 @@
   --home-figure-sm: url(/assets/portrait_dark_sm.jpg), #2f3834;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-hex: #ffffff;
-    --background-start-hex: #171717;
-    --background-end-hex: #171717;
-    --header-bg: #1e2849;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.2)
-    );
-
-    --tile-start-hex: #242424;
-    --tile-end-hex: #0c0c0c;
-    --tile-border: conic-gradient(
-      #ffffff50,
-      #ffffff20,
-      #ffffff10,
-      #ffffff00,
-      #ffffff00,
-      #ffffff00,
-      #ffffff50
-    );
-
-    --callout-hex: #202020;
-    --callout-border-hex: #646464;
-
-    --box-shadow-color: rgba(255, 255, 255, 0.7);
-    --link-hover-color: rgba(255, 255, 255, 0.8);
-
-    --item-filter: invert(0.9);
-    --tooltip-background-color: #333;
-    --tooltip-color: #fff;
-
-    --text-divider: #e45447;
-  }
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
