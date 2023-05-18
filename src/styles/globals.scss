@@ -12,6 +12,7 @@
   --heroImageOverflow: 8rem;
   --font-size-header-footer: 1.6rem;
   --font-size-header-footer-sm: 1.1rem;
+  --scrollBar: 7.5px;
 }
 
 [data-theme="light"] {
@@ -33,21 +34,6 @@
     rgba(255, 255, 255, 0)
   );
 
-  --tile-start-hex: #ffe4b5; /* a warm peach */
-  --tile-end-hex: #e4e8e9;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-hex: #fcecd5; /* a warm light beige */
-  --callout-border-hex: #cc9966; /* a warm brown */
-
   --box-shadow-color: #00000015;
   --link: #a04d66;
   --link-hover-color: #8d5710;
@@ -60,7 +46,6 @@
   --text-divider: #7d9e8e;
 
   --home-figure: url(/assets/portrait_light.jpg), #f3e8e5;
-  --home-figure-sm: url(/assets/portrait_light_sm.jpg), #f3e8e5;
 }
 
 [data-theme="dark"] {
@@ -77,21 +62,6 @@
     rgba(1, 65, 255, 0.2)
   );
 
-  --tile-start-hex: #242424;
-  --tile-end-hex: #0c0c0c;
-  --tile-border: conic-gradient(
-    #ffffff50,
-    #ffffff20,
-    #ffffff10,
-    #ffffff00,
-    #ffffff00,
-    #ffffff00,
-    #ffffff50
-  );
-
-  --callout-hex: #202020;
-  --callout-border-hex: #646464;
-
   --box-shadow-color: rgba(255, 255, 255, 0.7);
   --link: #8fb6b0;
   --link-hover-color: rgba(255, 255, 255, 0.8);
@@ -102,8 +72,7 @@
 
   --text-divider: #e45447;
 
-  --home-figure: url(/assets/portrait_dark.jpeg), #2f3834;
-  --home-figure-sm: url(/assets/portrait_dark_sm.jpg), #2f3834;
+  --home-figure: url(/assets/portrait_dark.jpg), #2f3834;
 }
 
 * {

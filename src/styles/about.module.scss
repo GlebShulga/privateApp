@@ -3,7 +3,7 @@
   font-size: 1.3rem;
   font-weight: 300;
   max-width: var(--postWidth);
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .container h1 {
@@ -21,6 +21,11 @@
   text-decoration: underline;
 }
 
+.photo {
+  object-fit: cover;
+  min-height: 300px;
+}
+
 @media (max-width: 768px) {
   .container {
     margin: 1.1rem;
@@ -28,5 +33,16 @@
 
   .container div {
     padding-bottom: 3.5rem;
+  }
+
+  .photo {
+    width: calc(100vw - var(--scrollBar));
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    margin-top: 1rem;
   }
 }

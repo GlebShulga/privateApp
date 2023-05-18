@@ -4,6 +4,7 @@ export default function About() {
   return (
       <section className={styles.container}>
         <h1>Hi, I&apos;m Gleb</h1>
+        <figure><img className={styles.photo} src="/assets/portrait_about.jpg" alt="portrait of the author"/></figure>
         <div>
           <p>
             I&apos;m a Full Stack developer with a primary focus on{" "}
