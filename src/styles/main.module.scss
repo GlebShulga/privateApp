@@ -31,6 +31,22 @@
   font-weight: 200;
 }
 
+.tooltip {
+  font-family: var(--fontCode);
+  font-weight: 600;
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  transform: translate(-50%) translateY(0.5em);
+  transition: transform 0.3s, opacity 0.3s;
+  color: var(--link-tooltip-color);
+}
+
+.link:has(:hover) .tooltip {
+  opacity: 1;
+  transform: translate(-50%) translateY(0);
+}
+
 .link_bar {
   margin-top: 1rem;
   display: flex;

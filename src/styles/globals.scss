@@ -13,6 +13,7 @@
   --font-size-header-footer: 1.6rem;
   --font-size-header-footer-sm: 1.1rem;
   --scrollBar: 7.5px;
+  --link-tooltip-color: #333;
 }
 
 [data-theme="light"] {
@@ -41,7 +42,7 @@
   --item-filter: none;
 
   --tooltip-background-color: #ffe3a7;
-  --tooltip-color: #333;
+  --header-tooltip-color: #333;
 
   --text-divider: #7d9e8e;
 
@@ -68,7 +69,7 @@
 
   --item-filter: invert(0.9);
   --tooltip-background-color: #333;
-  --tooltip-color: #fff;
+  --header-tooltip-color: #fff;
 
   --text-divider: #e45447;
 
