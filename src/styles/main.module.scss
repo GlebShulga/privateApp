@@ -106,6 +106,10 @@
     margin-top: 1rem;
   }
 
+  .text span {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
   .text_thin {
     font-size: clamp(1.1rem, 3vw, 1.9rem);
   }
