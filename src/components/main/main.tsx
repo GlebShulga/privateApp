@@ -14,7 +14,7 @@ export const Main = (): JSX.Element => {
         <ul className={styles.link_bar}>
           {socialLinks.map((link) => (
             <li className={styles.link} key={link.name}>
-              <a href={link.url} target="_blank">
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
                 <figure>
                   <img src={link.iconSrc} alt={`${link.name} icon`} />
                   <figcaption className={styles.tooltip}>

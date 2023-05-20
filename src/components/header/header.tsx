@@ -23,11 +23,13 @@ export const Header = (): JSX.Element => {
 
   return (
     <header className={styles.container}>
-      <img
-        src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
-        className={styles.logo}
-        alt="website logo"
-      />
+      <Link href="/">
+        <img
+          src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
+          className={styles.logo}
+          alt="website logo"
+        />
+      </Link>
       <div className={styles.links}>
         {headerLinks.map((link) => (
           <Link href={link.url} className={styles.link} key={link.title}>
