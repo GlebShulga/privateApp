@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## How to quickly try it?
+
+👉 The project is hosted on Github pages: https://glebshulga.github.io/privateApp
+
 ## Getting Started
 
 First, run the development server:
@@ -18,10 +22,6 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 The `pages` directory is mapped to `/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## How to quickly try it?
-
-👉 The project is hosted on Github pages: https://glebshulga.github.io/privateApp
 
 ## Learn More
 
