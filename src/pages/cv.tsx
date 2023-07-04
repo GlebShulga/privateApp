@@ -34,6 +34,16 @@ export default function Cv() {
           address technical issues, ensuring timely delivery of high-quality
           code.
         </li>
+        <li>
+          Created components in Storybook and leveraged it as a design system to
+          showcase and document UI components for seamless collaboration across
+          teams.
+        </li>
+        <li>
+          Set up components in CMS (AEM and ContentStack) to enable efficient
+          content management and streamline the process of updating and
+          maintaining website content..
+        </li>
       </ul>
       <h2>Freelance</h2>
       <p>FullStack Developer</p>
