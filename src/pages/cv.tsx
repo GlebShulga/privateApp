@@ -2,7 +2,7 @@ import { calculateYearsAndMonths } from "@component/helpers/calculateYearsAndMon
 import styles from "@component/styles/cv.module.scss";
 
 export default function Cv() {
-  const periodOnLastJob = calculateYearsAndMonths(new Date(2021, 8));
+  const periodOnLastJob = calculateYearsAndMonths(new Date(2021, 10));
 
   return (
     <div className={styles.container}>
