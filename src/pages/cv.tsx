@@ -4,6 +4,11 @@ import styles from "@component/styles/cv.module.scss";
 export default function Cv() {
   const periodOnLastJob = calculateYearsAndMonths(new Date(2021, 10));
 
+  const periodInEpam =
+    periodOnLastJob.months === 0
+      ? `Oct 2021 - Present · ${periodOnLastJob.years} yr`
+      : `Oct 2021 - Present · ${periodOnLastJob.years} yr ${periodOnLastJob.months} mos`;
+
   return (
     <div className={styles.container}>
       <h1>Experience</h1>
@@ -12,12 +17,17 @@ export default function Cv() {
       </div>
       <h2>EPAM Systems</h2>
       <p>Frontend Developer</p>
-      <p>{`Oct 2021 - Present · ${periodOnLastJob.years} yr ${periodOnLastJob.months} mos`}</p>
+      <p>{periodInEpam}</p>
       <ul>
         <li>
           Successfully built and launched a new enterprise-level React
           application from scratch, which received positive feedback from
           stakeholders and end-users.
+        </li>
+        <li>
+          Significantly contributed to extending an enterprise e-commerce
+          project, leveraging an existing code base to develop three additional
+          websites with distinct styles.
         </li>
         <li>
           Implemented new features and bug fixes in accordance with business
@@ -30,11 +40,6 @@ export default function Cv() {
           bugs and regressions.
         </li>
         <li>
-          Collaborated closely with cross-functional teams to identify and
-          address technical issues, ensuring timely delivery of high-quality
-          code.
-        </li>
-        <li>
           Created components in Storybook and leveraged it as a design system to
           showcase and document UI components for seamless collaboration across
           teams.
@@ -43,6 +48,11 @@ export default function Cv() {
           Set up components in CMS (AEM and ContentStack) to enable efficient
           content management and streamline the process of updating and
           maintaining website content..
+        </li>
+        <li>
+          Collaborated closely with cross-functional teams to identify and
+          address technical issues, ensuring timely delivery of high-quality
+          code.
         </li>
       </ul>
       <h2>Freelance</h2>
