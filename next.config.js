@@ -11,8 +11,7 @@ const nextConfig = {
   assetPrefix: assetPrefix,
   basePath: basePath,
   images: {
-    loader: "imgix",
-    path: "https://private-9498.imgix.net",
+    domains: [],
   },
 };
 
