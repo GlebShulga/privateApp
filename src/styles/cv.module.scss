@@ -49,6 +49,27 @@
   background-color: var(--text-divider);
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.downloadCVButton {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: var(--cv-button-bg);
+  border-radius: 0.25rem;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 1.25rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--cv-button-bg-hover);
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding-bottom: 3.5rem;

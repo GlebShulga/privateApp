@@ -7,7 +7,6 @@ const assetPrefix = isGithubActions ? `/${repo}/` : "";
 const basePath = isGithubActions ? `/${repo}` : "";
 
 const nextConfig = {
-  output: "export",
   reactStrictMode: true,
   assetPrefix: assetPrefix,
   basePath: basePath,

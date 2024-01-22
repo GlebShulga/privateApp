@@ -6,7 +6,7 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   --fontCode: "Azeret Mono", monospace;
-  --fontAbout: system-ui,sans-serif;
+  --fontAbout: system-ui, sans-serif;
   --heroImageHeight: 500px;
   --heroImageHeight-md: 400px;
   --heroImageHeight-sm: 350px;
@@ -22,6 +22,8 @@
   --background-start-hex: #fddfa1; /* a warm yellow */
   --background-end-hex: #ffffff;
   --header-bg: #ffdc94;
+  --cv-button-bg: #f9c14e;
+  --cv-button-bg-hover: #ff9c19;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -55,6 +57,8 @@
   --background-start-hex: #171717;
   --background-end-hex: #171717;
   --header-bg: #1e2849;
+  --cv-button-bg: #3e5ab7;
+  --cv-button-bg-hover: #2145bd;
 
   --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
   --secondary-glow: linear-gradient(

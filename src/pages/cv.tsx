@@ -11,7 +11,17 @@ export default function Cv() {
 
   return (
     <div className={styles.container}>
-      <h1>Experience</h1>
+      <div className={styles.header}>
+        <h1>Experience</h1>
+        <a
+          href="/cv/gleb_shulga_cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.downloadCVButton}
+        >
+          Download CV
+        </a>
+      </div>
       <div className={styles.line}>
         <div className={styles.point} />
       </div>
