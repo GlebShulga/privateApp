@@ -32,7 +32,13 @@ export const Header = (): JSX.Element => {
       </Link>
       <div className={styles.links}>
         {headerLinks.map((link) => (
-          <Link href={link.url} className={styles.link} key={link.title}>
+          <Link
+            href={link.url}
+            className={styles.link}
+            key={link.title}
+            target={link?.target}
+            rel={link?.rel}
+          >
             {link.title}
           </Link>
         ))}

@@ -1,5 +1,5 @@
 import { calculateYearsAndMonths } from "@component/helpers/calculateYearsAndMonths";
-import styles from "@component/styles/cv.module.scss";
+import styles from "@component/styles/experience.module.scss";
 
 export default function Cv() {
   const periodOnLastJob = calculateYearsAndMonths(new Date(2021, 10));
@@ -11,17 +11,7 @@ export default function Cv() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <h1>Experience</h1>
-        <a
-          href="/cv/gleb_shulga_cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.downloadCVButton}
-        >
-          Download CV
-        </a>
-      </div>
+      <h1>Experience</h1>
       <div className={styles.line}>
         <div className={styles.point} />
       </div>
@@ -57,7 +47,7 @@ export default function Cv() {
         <li>
           Set up components in CMS (AEM and ContentStack) to enable efficient
           content management and streamline the process of updating and
-          maintaining website content..
+          maintaining website content.
         </li>
         <li>
           Collaborated closely with cross-functional teams to identify and
@@ -85,7 +75,7 @@ export default function Cv() {
         </li>
         <li>
           Fixed responsiveness issues using Tailwind, ensuring that websites are
-          fully functional on all devices.
+          fully functional across all devices.
         </li>
         <li>
           Built RESTful APIs using Express and Node, creating robust and

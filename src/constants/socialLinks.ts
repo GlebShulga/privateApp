@@ -1,6 +1,6 @@
 export const socialLinks = [
   {
-    name: "Github",
+    name: "GitHub",
     url: "https://github.com/GlebShulga",
     iconSrc: "/assets/icon-github.svg",
   },

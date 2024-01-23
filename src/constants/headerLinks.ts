@@ -1,14 +1,12 @@
 export const headerLinks = [
   {
-    title: "Home",
-    url: "/",
+    title: "Experience",
+    url: "/experience",
   },
   {
-    title: "About Me",
-    url: "/about",
-  },
-  {
-    title: "CV",
-    url: "/cv",
+    title: "Download CV",
+    url: "/cv/gleb_shulga_cv.pdf",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
 ];
