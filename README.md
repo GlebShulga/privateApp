@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## How to quickly try it?
 
-👉 The project is hosted on Github pages: https://gleb-page.vercel.app/
+👉 The project is hosted on Github pages: https://shulga.vercel.app/
 
 ## Getting Started
 

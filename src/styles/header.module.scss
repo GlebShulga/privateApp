@@ -42,9 +42,14 @@
 @media (max-width: 768px) {
   .container {
     font-size: var(--font-size-header-footer-sm);
+    align-items: center;
   }
 
   .link {
     text-align: center;
+  }
+
+  .links {
+    align-items: center;
   }
 }
