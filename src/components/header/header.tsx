@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Tooltip } from "../tooltip/tooltip";
 import { headerLinks } from "../../constants/headerLinks";
@@ -16,7 +16,24 @@ export const Header = (): JSX.Element => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const newTheme = isDarkMode ? "light" : "dark";
+    const savedTheme = window.localStorage.getItem("theme");
+    document.body.setAttribute("data-theme", savedTheme ?? "dark");
+    savedTheme && setIsDarkMode(savedTheme === "dark");
+  }, []);
+
+  const handleThemeChange = () => {
+    setIsDarkMode((prevState) => !prevState);
+  };
+
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    const newTheme = isDarkMode ? "dark" : "light";
     document.body.setAttribute("data-theme", newTheme);
     window.localStorage.setItem("theme", newTheme);
 
@@ -28,7 +45,7 @@ export const Header = (): JSX.Element => {
     <header className={styles.container}>
       <Link href="/">
         <img
-          src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
+          src={isDarkMode ? LOGO_LIGHT : LOGO_DARK}
           className={styles.logo}
           alt="website logo"
         />
@@ -46,14 +63,11 @@ export const Header = (): JSX.Element => {
           </Link>
         ))}
         <Tooltip text="Page theme toggle">
-          <button
-            onClick={() => setIsDarkMode((prevState) => !prevState)}
-            className={styles.button}
-          >
+          <button onClick={handleThemeChange} className={styles.button}>
             <img
-              src={isDarkMode ? SUN : MOON}
+              src={isDarkMode ? MOON : SUN}
               className={styles.logo}
-              alt={isDarkMode ? SUN_ALT : MOON_ALT}
+              alt={isDarkMode ? MOON_ALT : SUN_ALT}
             />
           </button>
         </Tooltip>
