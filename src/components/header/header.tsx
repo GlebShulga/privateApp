@@ -18,7 +18,10 @@ export const Header = (): JSX.Element => {
   useEffect(() => {
     const newTheme = isDarkMode ? "light" : "dark";
     document.body.setAttribute("data-theme", newTheme);
-    window.localStorage.setItem("theme", "dark");
+    window.localStorage.setItem("theme", newTheme);
+
+    // Trigger a reflow
+    void document.body.offsetHeight;
   }, [isDarkMode]);
 
   return (
