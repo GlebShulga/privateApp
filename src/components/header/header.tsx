@@ -17,7 +17,7 @@ export const Header = (): JSX.Element => {
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("theme");
-    document.body.setAttribute("data-theme", savedTheme ?? "dark");
+    document.body.className = savedTheme ?? "dark";
     savedTheme && setIsDarkMode(savedTheme === "dark");
   }, []);
 
@@ -34,7 +34,7 @@ export const Header = (): JSX.Element => {
     }
 
     const newTheme = isDarkMode ? "dark" : "light";
-    document.body.setAttribute("data-theme", newTheme);
+    document.body.className = newTheme;
     window.localStorage.setItem("theme", newTheme);
 
     // Trigger a reflow

@@ -16,7 +16,7 @@
   --link-tooltip-color: #333;
 }
 
-[data-theme="light"] {
+.light {
   --foreground: #000000;
   --background-start: #fddfa1; /* a warm yellow */
   --background-end: #ffffff;
@@ -51,7 +51,7 @@
   --home-figure: url(/assets/portrait_light.jpg), #f3e8e5;
 }
 
-[data-theme="dark"] {
+.dark {
   --foreground: #ffffff;
   --background-start: #171717;
   --background-end: #171717;
