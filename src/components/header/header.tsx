@@ -16,6 +16,8 @@ export const Header = (): JSX.Element => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (typeof window !== "undefined") {
       const savedTheme = window.localStorage.getItem("theme");
+      document.body.className = savedTheme ?? "light";
+
       return savedTheme === "dark";
     }
     return false;
