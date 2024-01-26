@@ -1,10 +1,10 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from "react";
 import styles from "@component/styles/tooltip.module.scss";
 
 interface TooltipProps {
-    children: ReactNode;
-    text: string;
-  }
+  children: ReactNode;
+  text: string;
+}
 
 export const Tooltip = ({ children, text }: TooltipProps) => {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -13,14 +13,25 @@ export const Tooltip = ({ children, text }: TooltipProps) => {
     setShowTooltip(true);
   };
 
+  const handleTouchStart = () => {
+    setShowTooltip(true);
+  };
+
   const handleMouseLeave = () => {
     setShowTooltip(false);
   };
 
+  const handleTouchEnd = () => {
+    setShowTooltip(false);
+  };
+
   return (
-    <div className={styles.tooltip_container}
+    <div
+      className={styles.tooltip_container}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       {children}
       {showTooltip && <div className={styles.tooltip}>{text}</div>}
