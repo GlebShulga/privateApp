@@ -13,13 +13,20 @@ import {
 import styles from "@component/styles/header.module.scss";
 
 export const Header = (): JSX.Element => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      const savedTheme = window.localStorage.getItem("theme");
+      return savedTheme === "dark";
+    }
+    return false;
+  });
+  const [logoSrc, setLogoSrc] = useState(LOGO_DARK);
+  const [buttonSrc, setButtonSrc] = useState(MOON);
 
   useEffect(() => {
-    const savedTheme = window.localStorage.getItem("theme");
-    document.body.className = savedTheme ?? "dark";
-    savedTheme && setIsDarkMode(savedTheme === "dark");
-  }, []);
+    setLogoSrc(isDarkMode ? LOGO_LIGHT : LOGO_DARK);
+    setButtonSrc(isDarkMode ? MOON : SUN);
+  }, [isDarkMode]);
 
   const handleThemeChange = () => {
     setIsDarkMode((prevState) => !prevState);
@@ -44,11 +51,7 @@ export const Header = (): JSX.Element => {
   return (
     <header className={styles.container}>
       <Link href="/">
-        <img
-          src={isDarkMode ? LOGO_LIGHT : LOGO_DARK}
-          className={styles.logo}
-          alt="website logo"
-        />
+        <img src={logoSrc} className={styles.logo} alt="website logo" />
       </Link>
       <div className={styles.links}>
         {headerLinks.map((link) => (
@@ -65,7 +68,7 @@ export const Header = (): JSX.Element => {
         <Tooltip text="Page theme toggle">
           <button onClick={handleThemeChange} className={styles.button}>
             <img
-              src={isDarkMode ? MOON : SUN}
+              src={buttonSrc}
               className={styles.logo}
               alt={isDarkMode ? MOON_ALT : SUN_ALT}
             />
