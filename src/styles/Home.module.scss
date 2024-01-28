@@ -74,6 +74,11 @@
   .center::before {
     transform: none;
     height: 300px;
+    top: 10%;
+  }
+
+  .center::after {
+    top: 20%;
   }
 }
 
