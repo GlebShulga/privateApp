@@ -35,6 +35,12 @@ export default function Cv() {
           satisfaction.
         </li>
         <li>
+          Integrated third-party services such as TrueFit and Google reCAPTCHA
+          seamlessly into the application, enhancing its functionality and
+          security measures, while ensuring compatibility and smooth user
+          experience.
+        </li>
+        <li>
           Wrote comprehensive unit and integration tests for various components,
           functions, and API endpoints to maintain high code quality and prevent
           bugs and regressions.

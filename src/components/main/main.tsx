@@ -47,9 +47,7 @@ export const Main = (): JSX.Element => {
             which has significantly improved website navigation. My commitment
             to accessibility is strong, and I have conducted audits and
             adaptations for e-commerce platforms to ensure A11y compliance,
-            making websites more accessible for users with disabilities. I have
-            also used Tailwind to fix responsiveness issues, ensuring that
-            websites are fully functional across all devices.
+            making websites more accessible for users with disabilities.
           </p>{" "}
           <p>
             In addition to my front-end expertise, I have built robust and
