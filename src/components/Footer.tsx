@@ -15,12 +15,20 @@ export const Footer = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className={footerStyles.container}>
-      <Image src={logoSrc} alt="Website logo" width={40} height={40} priority />{" "}
-      <div>
-        {currentYear} Gleb Shulga |{" "}
-        <a href={linkedInUrl} target="_blank">
-          <span>Get in touch</span>
-        </a>
+      <div className={footerStyles.wrapper}>
+        <Image
+          src={logoSrc}
+          alt="Website logo"
+          width={40}
+          height={40}
+          priority
+        />{" "}
+        <div>
+          {currentYear} Gleb Shulga |{" "}
+          <a href={linkedInUrl} target="_blank">
+            <span>Get in touch</span>
+          </a>
+        </div>
       </div>
     </footer>
   );
