@@ -44,6 +44,7 @@
 .center::before,
 .center::after {
   content: "";
+  top: 25%;
   left: 50%;
   position: absolute;
   filter: blur(45px);

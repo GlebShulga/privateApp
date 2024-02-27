@@ -1,4 +1,4 @@
-import { socialLinks } from "../../constants/socialLinks";
+import { socialLinks } from "../constants/socialLinks";
 import styles from "@component/styles/main.module.scss";
 
 export const Main = (): JSX.Element => {

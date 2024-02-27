@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Gleb Shulga - developer</title>
         <meta
           name="description"
           content="I am a skilled software developer with expertise in React and NodeJS. I offer software development services. Contact me to learn how I can help bring your software development project to life."

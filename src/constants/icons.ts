@@ -1,5 +1,5 @@
-export const LOGO_LIGHT = "/assets/logo_light_midnight_express.png";
-export const LOGO_DARK = "/assets/logo-dark-warm-bg.png";
+export const LOGO_LIGHT = "/assets/inspiration_dark.png";
+export const LOGO_DARK = "/assets/inspiration_light.png";
 export const SUN = "/assets/sun-exp-bg.png";
 export const MOON = "/assets/moon_midnight_express.png";
 

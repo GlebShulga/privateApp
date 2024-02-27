@@ -5,12 +5,20 @@
   background-color: var(--header-bg);
   padding: 1rem 2rem;
   text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .container a {
   transition: color 0.2s;
   color: var(--link);
   text-decoration: underline;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 @media (max-width: 768px) {
