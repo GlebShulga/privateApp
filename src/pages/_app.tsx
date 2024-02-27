@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className={styles.container}>
         <Head>
           <title>Gleb Shulga - developer</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <Header /> <Component {...pageProps} /> <Footer />
       </div>

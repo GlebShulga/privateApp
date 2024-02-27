@@ -12,7 +12,6 @@ export default function Document() {
           name="keywords"
           content="Full Stack Developer, Web Development Services, Frontend and Backend Development, JavaScript Developer, Node.js Developer, React.js Developer, Software Development Consultation, Responsive Web Design"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/logo-light-bg.png" />
         <script
           async

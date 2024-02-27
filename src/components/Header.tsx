@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Tooltip } from "./Tooltip";
 import { headerLinks } from "../constants/headerLinks";
@@ -26,7 +26,13 @@ export const Header = (): JSX.Element => {
   return (
     <header className={styles.container}>
       <Link href="/">
-        <img src={logoSrc} className={styles.logo} alt="website logo" />
+        <Image
+          src={logoSrc}
+          alt="Website logo"
+          width={48}
+          height={48}
+          priority
+        />
       </Link>
       <div className={styles.links}>
         {headerLinks.map((link) => (
