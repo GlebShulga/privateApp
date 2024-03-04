@@ -16,16 +16,16 @@
   text-decoration: underline;
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .container {
     font-size: var(--font-size-header-footer-sm);
     position: fixed;
     bottom: 0;
     z-index: 1;
-  }
-
-  .wrapper {
-    display: flex;
-    align-items: center;
   }
 }
