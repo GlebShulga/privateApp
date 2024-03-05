@@ -43,11 +43,10 @@ export const Main = (): JSX.Element => {
             website performance and improving user experience. Through various
             projects, I have honed my skills in optimizing Webpack bundle sizes,
             resulting in faster page load times and improved website
-            performance. I have also developed custom booking forms for hotels,
-            which has significantly improved website navigation. My commitment
-            to accessibility is strong, and I have conducted audits and
-            adaptations for e-commerce platforms to ensure A11y compliance,
-            making websites more accessible for users with disabilities.
+            performance. My commitment to accessibility is strong, and I have
+            conducted audits and adaptations for e-commerce platforms to ensure
+            A11y compliance, making websites more accessible for users with
+            disabilities.
           </p>{" "}
           <p>
             In addition to my front-end expertise, I have built robust and
