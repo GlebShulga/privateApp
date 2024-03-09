@@ -33,10 +33,12 @@ export const Main = (): JSX.Element => {
           <p>
             I&apos;m a Full Stack developer with a primary focus on{" "}
             <strong>React</strong> and <strong>NodeJS</strong>, and I enjoy
-            creating things that live on the Internet. During my career,
-            I&apos;ve had the opportunity to work on a variety of exciting
-            projects that have helped me hone my skills and gain valuable
-            experience.
+            creating things that live on the Internet.
+          </p>
+          <p>
+            During my career, I&apos;ve had the opportunity to work on a variety
+            of exciting projects that have helped me hone my skills and gain
+            valuable experience.
           </p>
           <p>
             My area of expertise as a Full Stack developer lies in optimizing

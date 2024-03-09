@@ -8,10 +8,6 @@ export default function Document() {
           name="description"
           content="I am a skilled software developer with expertise in React and NodeJS. I offer software development services. Contact me to learn how I can help bring your software development project to life."
         />
-        <meta
-          name="keywords"
-          content="Full Stack Developer, Web Development Services, Frontend and Backend Development, JavaScript Developer, Node.js Developer, React.js Developer, Software Development Consultation, Responsive Web Design"
-        />
         <link rel="icon" href="/assets/logo-light-bg.png" />
         <script
           async
