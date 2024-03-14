@@ -25,15 +25,17 @@ export const Header = (): JSX.Element => {
 
   return (
     <header className={styles.container}>
-      <Link href="/">
-        <Image
-          src={logoSrc}
-          alt="Website logo"
-          width={48}
-          height={48}
-          priority
-        />
-      </Link>
+      <Tooltip text="Main page">
+        <Link href="/">
+          <Image
+            src={logoSrc}
+            alt="Website logo"
+            width={48}
+            height={48}
+            priority
+          />
+        </Link>
+      </Tooltip>
       <div className={styles.links}>
         {headerLinks.map((link) => (
           <Link
