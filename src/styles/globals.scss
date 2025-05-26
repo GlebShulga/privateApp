@@ -5,7 +5,8 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  --fontCode: "Azeret Mono", monospace;
+  --fontCode: "Azeret Mono", "SF Mono", "Monaco", "Inconsolata", "Fira Code",
+    "Droid Sans Mono", monospace;
   --heroImageHeight: 500px;
   --heroImageHeight-md: 400px;
   --heroImageHeight-sm: 350px;
@@ -14,70 +15,102 @@
   --font-size-header-footer-sm: 1rem;
   --scrollBar: 7.5px;
   --link-tooltip-color: #333;
+
+  /* Modern spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* Modern shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .light {
   --foreground: #000000;
-  --background-start: #fddfa1; /* a warm yellow */
+  --background-start: #fef7ed; /* warm orange tint */
   --background-end: #ffffff;
-  --header-bg: #ffdc94;
-  --cv-button-bg: #f9c14e;
-  --cv-button-bg-hover: #ff9c19;
+  --header-bg: linear-gradient(135deg, #fff7ed, #fef3c7);
+  --header-bg-start: #fff7ed; /* Left side of gradient for logo */
+  --cv-button-bg: #f59e0b;
+  --cv-button-bg-hover: #d97706;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
-    #ffb34733 0deg,
-    #ffa07a33 55deg,
-    #fdb81333 120deg,
-    #ff8c0033 160deg,
+    #f59e0b33 0deg,
+    #f97316b3 55deg,
+    #ea580c33 120deg,
+    #dc262633 160deg,
     transparent 360deg
   );
   --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0)
+    rgba(245, 158, 11, 0.1),
+    rgba(245, 158, 11, 0)
   );
 
-  --box-shadow-color: #00000015;
-  --link: #a04d66;
-  --link-hover-color: #8d5710;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --link: #0369a1;
+  --link-hover-color: #0284c7;
 
   --item-filter: none;
 
-  --tooltip-background-color: #ffe3a7;
+  --tooltip-background-color: rgba(255, 255, 255, 0.95);
   --header-tooltip-color: #333;
 
-  --text-divider: #7d9e8e;
+  --text-divider: #64748b;
 
-  --home-figure: url(/assets/portrait_light.jpg), #f3e8e5;
+  --home-figure: url(/assets/portrait_light.jpg),
+    linear-gradient(135deg, #fef3c7, #fed7aa);
+
+  /* Light mode gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
 .dark {
   --foreground: #ffffff;
-  --background-start: #171717;
-  --background-end: #171717;
-  --header-bg: #1e2849;
-  --cv-button-bg: #3e5ab7;
-  --cv-button-bg-hover: #2145bd;
+  --background-start: #0f172a;
+  --background-end: #1e293b;
+  --header-bg: linear-gradient(135deg, #1e293b, #334155);
+  --header-bg-start: #1e293b; /* Left side of gradient for logo */
+  --cv-button-bg: #3b82f6;
+  --cv-button-bg-hover: #2563eb;
 
-  --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+  --primary-glow: radial-gradient(
+    rgba(59, 130, 246, 0.4),
+    rgba(59, 130, 246, 0)
+  );
   --secondary-glow: linear-gradient(
     to bottom right,
-    rgba(1, 65, 255, 0),
-    rgba(1, 65, 255, 0),
-    rgba(1, 65, 255, 0.2)
+    rgba(59, 130, 246, 0),
+    rgba(59, 130, 246, 0),
+    rgba(59, 130, 246, 0.2)
   );
 
-  --box-shadow-color: rgba(255, 255, 255, 0.7);
-  --link: #8fb6b0;
-  --link-hover-color: rgba(255, 255, 255, 0.8);
-
+  --box-shadow-color: rgba(0, 0, 0, 0.3);
+  --link: #60a5fa;
+  --link-hover-color: #93c5fd;
   --item-filter: invert(0.9);
-  --tooltip-background-color: #333;
+  --tooltip-background-color: rgba(30, 41, 59, 0.95);
   --header-tooltip-color: #fff;
+  --link-tooltip-color: #fff;
 
-  --text-divider: #e45447;
+  --text-divider: #ef4444;
 
-  --home-figure: url(/assets/portrait_dark.jpg), #2f3834;
+  --home-figure: url(/assets/portrait_dark.jpg),
+    linear-gradient(135deg, #1e293b, #374151);
+
+  /* Dark mode gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  --gradient-accent: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 * {
@@ -86,55 +119,143 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   color: var(--foreground);
   background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      var(--background-end) 100%
-    )
-    var(--background-start);
+    135deg,
+    var(--background-start) 0%,
+    var(--background-end) 100%
+  );
+  min-height: 100vh;
+  position: relative;
 }
 
+/* Modern backdrop blur effect */
 body::before {
   content: "";
-  display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: inherit;
-  z-index: -1;
+  background: var(--primary-glow);
+  opacity: 0.1;
+  z-index: -2;
+  pointer-events: none;
 }
 
 a {
-  color: inherit;
+  color: var(--link);
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-h1 {
-  font-weight: 100;
+a:hover {
+  color: var(--link-hover-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
   margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: var(--scrollBar);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-start);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--link);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--link-hover-color);
+}
+
+/* Selection styles */
+::selection {
+  background: var(--link);
+  color: var(--background-start);
+}
+
+::-moz-selection {
+  background: var(--link);
+  color: var(--background-start);
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
 
-  @supports not (
-    background-image:
-      linear-gradient(to bottom, transparent 0%, var(--background-end) 100%)
-  ) {
-    body::before {
-      background: var(--background-start);
-    }
-  }
+/* Modern button reset */
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Enhanced typography */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Modern glass effect */
+.glass {
+  background: var(--tooltip-background-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }

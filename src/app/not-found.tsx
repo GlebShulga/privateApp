@@ -1,7 +1,5 @@
 import styles from "@component/styles/app.module.scss";
 
-const Custom404 = (): JSX.Element => {
+export default function NotFound() {
   return <h1 className={styles.container404}>404 - Page Not Found</h1>;
-};
-
-export default Custom404;
+}

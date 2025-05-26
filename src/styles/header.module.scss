@@ -5,55 +5,184 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--header-bg);
+  background: var(--header-bg);
+  height: 4rem;
+  box-shadow: var(--shadow-sm);
+  padding: 0 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--box-shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.logo {
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  /* Fixed dimensions to prevent oversizing */
+  width: 3.5rem;
   height: 3.5rem;
-  box-shadow: 0 1px 0px var(--box-shadow-color);
-  padding: 0.5rem 0.8rem;
+  /* Create a background that matches the left side of header gradient */
+  background: var(--header-bg-start);
+
+  /* Alternative approach: use a solid color that matches the left side */
+  /* For light mode: the left side of the gradient #fff7ed */
+  /* For dark mode: the left side of the gradient #1e293b */
+
+  /* SVG logo styling */
+  img {
+    border-radius: 0.5rem;
+    display: block;
+
+    /* Force specific size constraints */
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+
+    /* Add subtle shadow for depth */
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  }
+}
+
+.logo:hover {
+  box-shadow: var(--shadow-sm);
+
+  img {
+    transform: scale(1.02);
+  }
 }
 
 .links {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-.button {
-  width: 2rem;
-  height: 2rem;
-  border: none;
+  gap: 2rem;
 }
 
 .link {
-  margin: 0 1.5rem;
-  transition: color 0.2s ease-in-out;
+  position: relative;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--foreground);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--link);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
   &:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
+    color: var(--link);
+    background: var(--header-bg);
+    transform: translateY(-1px);
+
+    &::after {
+      width: 80%;
+    }
   }
 }
 
 .button {
   cursor: pointer;
-  overflow: hidden;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: none;
+  background: transparent;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.buttonIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.button:hover .buttonIcon {
+  transform: scale(1.1);
+  filter: brightness(1.2) saturate(1.1);
+  transition: all 0.2s ease;
+}
+
+/* Remove focus outline for header icons */
+.button:focus {
+  outline: none;
+}
+
+.buttonIcon:focus {
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .links {
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     font-size: var(--font-size-header-footer-sm);
-    align-items: center;
-    white-space: nowrap;
-  }
-
-  .link {
-    text-align: center;
-    margin: 0 1rem;
+    padding: 0 1rem;
+    height: 3.5rem;
   }
 
   .links {
-    align-items: center;
-    margin-right: 0.3rem;
+    gap: 1rem;
+  }
+
+  .link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .button {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .buttonIcon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .links {
+    gap: 0.5rem;
+  }
+
+  .link {
+    padding: 0.25rem;
+    font-size: 0.8rem;
   }
 }

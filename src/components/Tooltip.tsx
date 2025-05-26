@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ReactNode, useState } from "react";
 import styles from "@component/styles/tooltip.module.scss";
 
