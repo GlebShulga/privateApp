@@ -101,6 +101,7 @@
 
   &:hover {
     background: var(--link-hover-color);
+    color: var(--background-start);
     box-shadow: var(--shadow-md);
     transform: translateY(-1px);
   }

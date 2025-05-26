@@ -34,7 +34,7 @@ export const personalInfo: PersonalInfo = {
   email: "shulga_gleb@hotmail.com",
   linkedin: "http://www.linkedin.com/in/gleb-shulga",
   summary:
-    "Front-end developer with over 4 years of experience, primarily focused on React, Next.js, and building high-performance web applications. I enjoy creating things that live on the internet and are accessible to everyone.",
+    "Front-end developer with 5 years of experience, primarily focused on React, Next.js, and building high-performance web applications. I enjoy creating things that live on the internet and are accessible to everyone.",
 };
 
 export const skills: Skills = {
@@ -70,6 +70,10 @@ export const skills: Skills = {
     {
       language: "English",
       proficiency: "Professional Working",
+    },
+    {
+      language: "Spanish",
+      proficiency: "Novice",
     },
   ],
 };
@@ -160,7 +164,7 @@ export const experience: Experience[] = [
 ];
 
 export const totalExperience = {
-  years: 4,
+  years: 5,
   months: 9,
-  description: "Over 4 years of experience in frontend development",
+  description: "5 years of experience in frontend development",
 };

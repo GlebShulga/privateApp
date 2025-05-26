@@ -18,6 +18,7 @@ import {
   Triangle,
 } from "lucide-react";
 import Image from "next/image";
+import { Tooltip } from "./Tooltip";
 
 export const Main = (): JSX.Element => {
   const { theme } = useTheme();
@@ -55,24 +56,26 @@ export const Main = (): JSX.Element => {
   const scrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
-
   return (
     <div>
       {/* Hero Section */}
-      <motion.div
+      <motion.section
         className={`${styles.hero} ${styles.grid}`}
         initial="hidden"
         animate="visible"
         variants={containerVariants}
+        aria-labelledby="hero-heading"
+        id="main-content"
       >
         <motion.figure
           className={styles.figure}
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-        />{" "}
-        <div className={styles.home_text}>
-          <motion.h1 className={styles.text} variants={itemVariants}>
+          role="img"
+          aria-label="Professional portrait of Gleb Shulga"
+        />        <div className={styles.home_text}>
+          <motion.h1 className={styles.text} variants={itemVariants} id="hero-heading">
             <motion.span
               className={styles.greeting}
               initial={{ opacity: 0, x: -20 }}
@@ -133,19 +136,16 @@ export const Main = (): JSX.Element => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
               >
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  <figure>
+                <Tooltip text={link.name}>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
                     <Image
                       src={link.iconSrc}
                       alt={`${link.name} icon`}
                       width={24}
                       height={24}
                     />
-                    <figcaption className={styles.tooltip}>
-                      {link.name}
-                    </figcaption>
-                  </figure>
-                </a>
+                  </a>
+                </Tooltip>
               </motion.li>
             ))}
           </motion.ul>
@@ -155,13 +155,12 @@ export const Main = (): JSX.Element => {
             variants={itemVariants}
             whileHover={{ y: -3, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            aria-label="Scroll to about section"
+            transition={{ duration: 0.2 }}            aria-label="Scroll to about section"
           >
             <ChevronDown size={24} />
           </motion.button>
         </div>
-      </motion.div>
+      </motion.section>
 
       {/* About Section */}
       <motion.section
@@ -180,37 +179,55 @@ export const Main = (): JSX.Element => {
                 {personalInfo.summary}
               </motion.p>
               <motion.p variants={itemVariants}>
-                With over 4 years of experience in frontend development, I have
-                worked on enterprise-level React applications, e-commerce
-                platforms, and international projects supporting 100+ locales. I
-                specialize in building high-performance, accessible web
+                Front-end developer with 5+ years of experience specializing in
+                React, Next.js, and building high-performance, accessible web
+                applications. I enjoy creating digital solutions that live on
+                the internet and are accessible to everyone.
+              </motion.p>
+              <motion.p variants={itemVariants}>
+                With extensive experience in enterprise-level React
+                applications, e-commerce platforms, and international projects
+                supporting 100+ locales, I excel at building scalable web
                 applications that deliver exceptional user experiences.
+                Currently leading development teams and managing complex
+                projects using modern technologies including TypeScript, React,
+                Next.js, and various CMS platforms.
               </motion.p>
               <motion.p variants={itemVariants}>
-                My expertise includes performance optimization, reducing TTFB by
-                20% through code splitting and asset optimization, and
-                maintaining 80%+ code coverage with comprehensive testing using
-                Jest and Testing Library.
+                My expertise includes performance optimization (achieving 20%
+                TTFB reduction through code splitting and asset optimization),
+                comprehensive testing strategies (maintaining 80%+ code coverage
+                with Jest and Testing Library), and managing NX Monorepos for
+                unified development workflows across multiple sites.
               </motion.p>
               <motion.p variants={itemVariants}>
-                I have experience leading development teams, managing NX
-                Monorepos, and working with modern technologies including
-                TypeScript, React, Next.js, and various CMS platforms like AEM
-                and ContentStack.
-              </motion.p>
+                I have hands-on experience with accessibility compliance (A11y),
+                internationalization, design systems, and integrating
+                third-party services. I thrive in collaborative environments,
+                working closely with cross-functional teams including product
+                managers, designers, and business stakeholders to deliver
+                user-centric solutions.
+              </motion.p>{" "}
               <motion.p variants={itemVariants}>
                 I&apos;m always excited about new challenges and love
                 collaborating with passionate teams on ambitious projects.
+              </motion.p>
+              <motion.div
+                className={styles.contact_section}
+                variants={itemVariants}
+              >
                 <motion.a
                   href={`mailto:${personalInfo.email}?subject=Hello There!&body=Hi Gleb, so I was looking at your website and...`}
                   className={styles.contact_link}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
                 >
+                  <Mail size={18} />
                   Let&apos;s connect and build something amazing together! 🚀
                 </motion.a>
-              </motion.p>
-            </div>{" "}
+              </motion.div>
+            </div>
             <motion.div
               className={styles.skills_highlight}
               variants={itemVariants}

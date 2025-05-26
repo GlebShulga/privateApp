@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useState, useId } from "react";
 import styles from "@component/styles/tooltip.module.scss";
 
 interface TooltipProps {
@@ -10,6 +10,7 @@ interface TooltipProps {
 
 export const Tooltip = ({ children, text }: TooltipProps) => {
   const [showTooltip, setShowTooltip] = useState(false);
+  const tooltipId = useId();
 
   const handleMouseEnter = () => {
     setShowTooltip(true);
@@ -27,6 +28,12 @@ export const Tooltip = ({ children, text }: TooltipProps) => {
     setShowTooltip(false);
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setShowTooltip(false);
+    }
+  };
+
   return (
     <div
       className={styles.tooltip_container}
@@ -34,9 +41,20 @@ export const Tooltip = ({ children, text }: TooltipProps) => {
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      onKeyDown={handleKeyDown}
+      aria-describedby={showTooltip ? tooltipId : undefined}
     >
       {children}
-      {showTooltip && <div className={styles.tooltip}>{text}</div>}
+      {showTooltip && (
+        <div 
+          id={tooltipId}
+          className={styles.tooltip} 
+          role="tooltip"
+          aria-live="polite"
+        >
+          {text}
+        </div>
+      )}
     </div>
   );
 };

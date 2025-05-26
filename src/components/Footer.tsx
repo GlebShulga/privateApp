@@ -15,7 +15,6 @@ export const Footer = (): JSX.Element => {
 
   const linkedInUrl = socialLinks[1].url;
   const currentYear = new Date().getFullYear();
-
   return (
     <motion.footer
       className={footerStyles.container}
@@ -23,6 +22,7 @@ export const Footer = (): JSX.Element => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
+      role="contentinfo"
     >
       <div className={footerStyles.content}>
         <div className={footerStyles.main_section}>
@@ -43,11 +43,9 @@ export const Footer = (): JSX.Element => {
               <h3>Gleb Shulga</h3>
               <p>Full Stack Developer</p>
             </div>
-          </motion.div>
-
-          <div className={footerStyles.quick_links}>
+          </motion.div>          <div className={footerStyles.quick_links}>
             <h4>Connect</h4>
-            <div className={footerStyles.social_links}>
+            <nav className={footerStyles.social_links} aria-label="Social media links">
               {socialLinks.map((link, index) => (
                 <motion.a
                   key={link.name}
@@ -61,18 +59,19 @@ export const Footer = (): JSX.Element => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
-                  aria-label={`Visit my ${link.name} profile`}
+                  aria-label={`Visit my ${link.name} profile (opens in new tab)`}
                 >
                   <Image
                     src={link.iconSrc}
-                    alt={`${link.name} icon`}
+                    alt=""
                     width={20}
                     height={20}
+                    aria-hidden="true"
                   />
                   <span>{link.name}</span>
                 </motion.a>
               ))}
-            </div>
+            </nav>
           </div>
 
           <div className={footerStyles.contact_section}>
@@ -95,12 +94,8 @@ export const Footer = (): JSX.Element => {
         <div className={footerStyles.bottom_section}>
           <div className={footerStyles.copyright}>
             <span>© {currentYear} Gleb Shulga. All rights reserved.</span>
-          </div>
-
-          <motion.div
-            className={footerStyles.made_with}
-            whileHover={{ scale: 1.05 }}
-          >
+          </div>{" "}
+          <div className={footerStyles.made_with}>
             <span>Made with</span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
@@ -109,7 +104,7 @@ export const Footer = (): JSX.Element => {
               <Heart size={16} fill="currentColor" />
             </motion.div>
             <span>and Next.JS</span>
-          </motion.div>
+          </div>
         </div>
       </div>
     </motion.footer>

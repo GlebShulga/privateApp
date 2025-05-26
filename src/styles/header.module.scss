@@ -126,13 +126,35 @@
   transition: all 0.2s ease;
 }
 
-/* Remove focus outline for header icons */
-.button:focus {
-  outline: none;
+/* Improved focus styles for accessibility */
+.button:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  background: var(--tooltip-background-color);
 }
 
-.buttonIcon:focus {
-  outline: none;
+.link:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* Skip navigation link styles */
+.skip_link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--link);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s ease;
+
+  &:focus {
+    top: 6px;
+  }
 }
 
 @media (max-width: 1024px) {

@@ -141,7 +141,6 @@ body {
     var(--background-start) 0%,
     var(--background-end) 100%
   );
-  min-height: 100vh;
   position: relative;
 }
 
@@ -219,13 +218,22 @@ p {
   outline-offset: 2px;
 }
 
-/* Reduced motion for accessibility */
+/* Enhanced reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
     scroll-behavior: auto !important;
+    transform: none !important;
+  }
+  
+  /* Keep essential animations but reduce intensity */
+  .skip-link:focus {
+    transition-duration: 0.15s !important;
   }
 }
 
