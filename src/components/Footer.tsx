@@ -1,11 +1,10 @@
-import { useTheme } from "../ThemeContext";
 import Image from "next/image";
-import { LOGO_LIGHT, LOGO_DARK } from "../constants/icons";
-import footerStyles from "@component/styles/footer.module.scss";
-import { socialLinks } from "../constants/socialLinks";
-import { personalInfo } from "../constants/cvData";
 import { motion } from "framer-motion";
 import { Heart, Mail, ExternalLink } from "lucide-react";
+import footerStyles from "@component/styles/footer.module.scss";
+import { useTheme } from "../ThemeContext";
+import { LOGO_LIGHT, LOGO_DARK } from "../constants/icons";
+import { socialLinks } from "../constants/socialLinks";
 
 export const Footer = (): JSX.Element => {
   const { theme } = useTheme();
@@ -13,7 +12,6 @@ export const Footer = (): JSX.Element => {
   const isDarkMode = theme === "dark";
   const logoSrc = isDarkMode ? LOGO_LIGHT : LOGO_DARK;
 
-  const linkedInUrl = socialLinks[1].url;
   const currentYear = new Date().getFullYear();
   return (
     <motion.footer
@@ -43,9 +41,13 @@ export const Footer = (): JSX.Element => {
               <h3>Gleb Shulga</h3>
               <p>Full Stack Developer</p>
             </div>
-          </motion.div>          <div className={footerStyles.quick_links}>
+          </motion.div>{" "}
+          <div className={footerStyles.quick_links}>
             <h4>Connect</h4>
-            <nav className={footerStyles.social_links} aria-label="Social media links">
+            <nav
+              className={footerStyles.social_links}
+              aria-label="Social media links"
+            >
               {socialLinks.map((link, index) => (
                 <motion.a
                   key={link.name}
@@ -73,7 +75,6 @@ export const Footer = (): JSX.Element => {
               ))}
             </nav>
           </div>
-
           <div className={footerStyles.contact_section}>
             <h4>Get In Touch</h4>
             <motion.a

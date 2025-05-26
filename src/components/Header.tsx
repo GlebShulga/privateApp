@@ -2,18 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+
 import { Tooltip } from "./Tooltip";
-import { headerLinks } from "../constants/headerLinks";
-import {
-  LOGO_LIGHT,
-  SUN,
-  MOON,
-  SUN_ALT,
-  MOON_ALT,
-  LOGO_DARK,
-} from "../constants/icons";
-import styles from "../styles/header.module.scss";
 import { useTheme } from "../ThemeContext";
+import { headerLinks } from "../constants/headerLinks";
+import { LOGO_LIGHT, SUN, MOON, LOGO_DARK } from "../constants/icons";
+import styles from "../styles/header.module.scss";
 import { motion } from "framer-motion";
 
 export const Header = (): JSX.Element => {
@@ -97,9 +91,7 @@ export const Header = (): JSX.Element => {
                 whileHover={{ scale: 1.1, rotate: 15 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.2 }}
-                aria-label={`Switch to ${
-                  isDarkMode ? "light" : "dark"
-                } mode`}
+                aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
                 aria-pressed={isDarkMode}
               >
                 <Image

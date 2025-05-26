@@ -1,10 +1,11 @@
 "use client";
 
-import { experience, personalInfo } from "../../constants/cvData";
-import styles from "../../styles/experience.module.scss";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Calendar, Award, Code, Users, Zap } from "lucide-react";
+
+import { experience } from "../../constants/cvData";
+import styles from "../../styles/experience.module.scss";
 
 export default function ExperiencePage() {
   const [ref, inView] = useInView({

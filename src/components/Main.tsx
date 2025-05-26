@@ -1,24 +1,16 @@
 "use client";
 
-import { socialLinks } from "../constants/socialLinks";
-import { personalInfo, skills, totalExperience } from "../constants/cvData";
-import { useTheme } from "../ThemeContext";
-import { NEXTJS_LIGHT, NEXTJS_DARK } from "../constants/icons";
-import styles from "../styles/main.module.scss";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import {
-  ChevronDown,
-  Code,
-  Palette,
-  Zap,
-  MapPin,
-  Mail,
-  Calendar,
-  Triangle,
-} from "lucide-react";
-import Image from "next/image";
+import { ChevronDown, Code, Zap, MapPin, Mail, Calendar } from "lucide-react";
+
 import { Tooltip } from "./Tooltip";
+import { useTheme } from "../ThemeContext";
+import { socialLinks } from "../constants/socialLinks";
+import { personalInfo, skills, totalExperience } from "../constants/cvData";
+import { NEXTJS_LIGHT, NEXTJS_DARK } from "../constants/icons";
+import styles from "../styles/main.module.scss";
 
 export const Main = (): JSX.Element => {
   const { theme } = useTheme();
@@ -74,8 +66,13 @@ export const Main = (): JSX.Element => {
           transition={{ duration: 0.3 }}
           role="img"
           aria-label="Professional portrait of Gleb Shulga"
-        />        <div className={styles.home_text}>
-          <motion.h1 className={styles.text} variants={itemVariants} id="hero-heading">
+        />{" "}
+        <div className={styles.home_text}>
+          <motion.h1
+            className={styles.text}
+            variants={itemVariants}
+            id="hero-heading"
+          >
             <motion.span
               className={styles.greeting}
               initial={{ opacity: 0, x: -20 }}
@@ -155,7 +152,8 @@ export const Main = (): JSX.Element => {
             variants={itemVariants}
             whileHover={{ y: -3, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}            aria-label="Scroll to about section"
+            transition={{ duration: 0.2 }}
+            aria-label="Scroll to about section"
           >
             <ChevronDown size={24} />
           </motion.button>
@@ -248,9 +246,9 @@ export const Main = (): JSX.Element => {
                 ))}
               </div>
               <div className={styles.languages_section}>
-                <h4>Languages</h4>
+                <h4>Languages</h4>{" "}
                 <div className={styles.languages_list}>
-                  {skills.languages.map((lang, index) => (
+                  {skills.languages.map((lang) => (
                     <span key={lang.language} className={styles.language_item}>
                       <strong>{lang.language}</strong> - {lang.proficiency}
                     </span>

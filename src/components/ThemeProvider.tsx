@@ -1,6 +1,7 @@
 "use client";
 
 import { FC, ReactNode, useEffect, useState } from "react";
+
 import { ThemeContext } from "../ThemeContext";
 
 type ThemeProviderProps = {

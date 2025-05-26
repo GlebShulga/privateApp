@@ -1,6 +1,7 @@
 "use client";
 
 import React, { ReactNode, useState, useId } from "react";
+
 import styles from "@component/styles/tooltip.module.scss";
 
 interface TooltipProps {
@@ -29,7 +30,7 @@ export const Tooltip = ({ children, text }: TooltipProps) => {
   };
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Escape') {
+    if (event.key === "Escape") {
       setShowTooltip(false);
     }
   };
@@ -46,9 +47,9 @@ export const Tooltip = ({ children, text }: TooltipProps) => {
     >
       {children}
       {showTooltip && (
-        <div 
+        <div
           id={tooltipId}
-          className={styles.tooltip} 
+          className={styles.tooltip}
           role="tooltip"
           aria-live="polite"
         >
