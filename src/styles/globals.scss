@@ -62,10 +62,9 @@
 
   --tooltip-background-color: rgba(255, 255, 255, 0.95);
   --header-tooltip-color: #333;
-
   --text-divider: #64748b;
 
-  --home-figure: url(/assets/portrait_light.jpg),
+  --home-figure: url(/assets/portrait_light.avif),
     linear-gradient(135deg, #fef3c7, #fed7aa);
 
   /* Light mode gradients */
@@ -101,10 +100,9 @@
   --tooltip-background-color: rgba(30, 41, 59, 0.95);
   --header-tooltip-color: #fff;
   --link-tooltip-color: #fff;
-
   --text-divider: #ef4444;
 
-  --home-figure: url(/assets/portrait_dark.jpg),
+  --home-figure: url(/assets/portrait_dark.avif),
     linear-gradient(135deg, #1e293b, #374151);
 
   /* Dark mode gradients */
