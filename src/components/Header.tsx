@@ -34,7 +34,6 @@ export const Header = (): JSX.Element => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         role="banner"
       >
-        {" "}
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

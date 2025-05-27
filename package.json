@@ -26,5 +26,19 @@
   "devDependencies": {
     "sass": "^1.77.0",
     "sass-loader": "^14.2.0"
-  }
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not IE 11",
+    "not IE_Mob 11",
+    "not op_mini all",
+    "not chrome < 60",
+    "not edge < 79",
+    "not firefox < 60",
+    "not ios < 12",
+    "not safari < 12",
+    "not samsung < 8"
+  ]
 }

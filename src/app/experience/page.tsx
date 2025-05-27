@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { Calendar, Award, Code, Users, Zap } from "lucide-react";
 
 import { experience } from "../../constants/cvData";
+import { calculateDuration } from "../../utils/calculateDuration";
 import styles from "../../styles/experience.module.scss";
 
 export default function ExperiencePage() {
@@ -68,16 +69,17 @@ export default function ExperiencePage() {
             className={styles.experience_card}
             variants={itemVariants}
           >
-            {" "}
             <div className={styles.card_header}>
               <div className={styles.company_info}>
                 <h2 className={styles.company}>{job.company}</h2>
                 <div className={styles.role_info}>
-                  <h3 className={styles.role}>{job.position}</h3>{" "}
+                  <h3 className={styles.role}>{job.position}</h3>
                   <div className={styles.meta}>
                     <span className={styles.meta_item}>
                       <Calendar size={16} />
-                      {job.startDate} - {job.endDate} · {job.duration}
+                      {job.startDate} - {job.endDate} ·{" "}
+                      {job.duration ||
+                        calculateDuration(job.startDate, job.endDate)}
                     </span>
                   </div>
                 </div>

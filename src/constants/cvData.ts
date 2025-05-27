@@ -4,7 +4,7 @@ export interface Experience {
   location: string;
   startDate: string;
   endDate: string;
-  duration: string;
+  duration?: string; // Optional - will be calculated if not provided for current positions
   description: string[];
   technologies?: string[];
 }
@@ -85,7 +85,7 @@ export const experience: Experience[] = [
     location: "Tbilisi, Georgia",
     startDate: "September 2024",
     endDate: "Present",
-    duration: "9 months",
+    // duration will be calculated automatically for current positions
     description: [
       "Lead development and maintenance responsive, high-performance frontend applications using Typescript, React, and Next.js.",
       "Leverage the project's Design System and UI-kit to build consistent, scalable, and user-friendly interfaces, directly enhancing customer satisfaction.",

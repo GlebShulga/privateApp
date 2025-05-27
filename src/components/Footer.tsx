@@ -41,7 +41,7 @@ export const Footer = (): JSX.Element => {
               <h3>Gleb Shulga</h3>
               <p>Full Stack Developer</p>
             </div>
-          </motion.div>{" "}
+          </motion.div>
           <div className={footerStyles.quick_links}>
             <h4>Connect</h4>
             <nav
@@ -95,7 +95,7 @@ export const Footer = (): JSX.Element => {
         <div className={footerStyles.bottom_section}>
           <div className={footerStyles.copyright}>
             <span>© {currentYear} Gleb Shulga. All rights reserved.</span>
-          </div>{" "}
+          </div>
           <div className={footerStyles.made_with}>
             <span>Made with</span>
             <motion.div

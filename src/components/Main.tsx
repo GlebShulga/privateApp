@@ -66,7 +66,7 @@ export const Main = (): JSX.Element => {
           transition={{ duration: 0.3 }}
           role="img"
           aria-label="Professional portrait of Gleb Shulga"
-        />{" "}
+        />
         <div className={styles.home_text}>
           <motion.h1
             className={styles.text}
@@ -101,12 +101,12 @@ export const Main = (): JSX.Element => {
                 <Calendar size={16} />
                 {totalExperience.description}
               </span>
-            </div>{" "}
+            </div>
             <div className={styles.specialties}>
               <span className={styles.specialty}>
                 <Code size={16} />
                 JavaScript/TypeScript
-              </span>{" "}
+              </span>
               <span className={styles.specialty}>
                 <Image
                   src={nextjsIconSrc}
@@ -170,7 +170,7 @@ export const Main = (): JSX.Element => {
         variants={containerVariants}
       >
         <motion.div variants={itemVariants}>
-          <h2 className={styles.section_title}>About Me</h2>{" "}
+          <h2 className={styles.section_title}>About Me</h2>
           <div className={styles.about_grid}>
             <div className={styles.about_text}>
               <motion.p variants={itemVariants}>
@@ -205,7 +205,7 @@ export const Main = (): JSX.Element => {
                 working closely with cross-functional teams including product
                 managers, designers, and business stakeholders to deliver
                 user-centric solutions.
-              </motion.p>{" "}
+              </motion.p>
               <motion.p variants={itemVariants}>
                 I&apos;m always excited about new challenges and love
                 collaborating with passionate teams on ambitious projects.
@@ -246,7 +246,7 @@ export const Main = (): JSX.Element => {
                 ))}
               </div>
               <div className={styles.languages_section}>
-                <h4>Languages</h4>{" "}
+                <h4>Languages</h4>
                 <div className={styles.languages_list}>
                   {skills.languages.map((lang) => (
                     <span key={lang.language} className={styles.language_item}>
