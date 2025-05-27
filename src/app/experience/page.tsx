@@ -8,6 +8,9 @@ import { experience } from "../../constants/cvData";
 import { calculateDuration } from "../../utils/calculateDuration";
 import styles from "../../styles/experience.module.scss";
 
+// Force static generation
+export const dynamic = "force-static";
+
 export default function ExperiencePage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
