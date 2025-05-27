@@ -56,28 +56,49 @@ export const Header = (): JSX.Element => {
           role="navigation"
           aria-label="Main navigation"
         >
-          {headerLinks.map((link, index) => (
-            <motion.div
-              key={link.title}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + index * 0.1, duration: 0.5 }}
-            >
-              <Link
-                href={link.url}
-                className={styles.link}
-                target={link?.target}
-                rel={link?.rel}
-                aria-label={
-                  link?.target === "_blank"
-                    ? `${link.title} (opens in new tab)`
-                    : link.title
-                }
+          {" "}
+          {headerLinks.map((link, index) => {
+            const isPdfFile = link.url.endsWith(".pdf");
+
+            return (
+              <motion.div
+                key={link.title}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + index * 0.1, duration: 0.5 }}
               >
-                {link.title}
-              </Link>
-            </motion.div>
-          ))}
+                {isPdfFile ? (
+                  <a
+                    href={link.url}
+                    className={styles.link}
+                    target={link?.target}
+                    rel={link?.rel}
+                    aria-label={
+                      link?.target === "_blank"
+                        ? `${link.title} (opens in new tab)`
+                        : link.title
+                    }
+                  >
+                    {link.title}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.url}
+                    className={styles.link}
+                    target={link?.target}
+                    rel={link?.rel}
+                    aria-label={
+                      link?.target === "_blank"
+                        ? `${link.title} (opens in new tab)`
+                        : link.title
+                    }
+                  >
+                    {link.title}
+                  </Link>
+                )}
+              </motion.div>
+            );
+          })}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
