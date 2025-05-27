@@ -22,7 +22,6 @@ export const Header = (): JSX.Element => {
 
   return (
     <>
-      {/* Skip Navigation Link */}
       <a href="#main-content" className={styles.skip_link}>
         Skip to main content
       </a>
@@ -39,24 +38,21 @@ export const Header = (): JSX.Element => {
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}
         >
-          <Tooltip text="Main page">
-            <Link href="/" className={styles.logo} aria-label="Go to homepage">
-              <Image
-                src={logoSrc}
-                alt="Gleb Shulga website logo"
-                width={48}
-                height={48}
-                priority
-              />
-            </Link>
-          </Tooltip>
+          <Link href="/" className={styles.logo} aria-label="Go to homepage">
+            <Image
+              src={logoSrc}
+              alt="Gleb Shulga website logo"
+              width={48}
+              height={48}
+              priority
+            />
+          </Link>
         </motion.div>
         <nav
           className={styles.links}
           role="navigation"
           aria-label="Main navigation"
         >
-          {" "}
           {headerLinks.map((link, index) => {
             const isPdfFile = link.url.endsWith(".pdf");
 
