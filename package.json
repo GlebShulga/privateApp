@@ -22,6 +22,7 @@
     "react-dom": "^18.3.0",
     "react-intersection-observer": "^9.10.0",
     "sharp": "^0.33.0",
+    "three": "^0.174.0",
     "typescript": "^5.4.0"
   },
   "devDependencies": {

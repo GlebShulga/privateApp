@@ -128,7 +128,15 @@
 .button:focus-visible {
   outline: 2px solid var(--link);
   outline-offset: 2px;
-  background: var(--tooltip-background-color);
+  background: rgba(0, 0, 0, 0.05);
+  
+  .light & {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .dark & {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
 
 .link:focus-visible {

@@ -1,0 +1,230 @@
+.container {
+  min-height: 100vh;
+}
+
+.header {
+  padding: var(--spacing-md) var(--spacing-lg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.back_link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--link-hover-color);
+  }
+}
+
+.title_section {
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-md);
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--header-tooltip-color);
+  opacity: 0.7;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.demo_container {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  margin: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-xl);
+}
+
+.canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  background: #16213e !important;
+}
+
+.controls_hint {
+  position: absolute;
+  bottom: var(--spacing-md);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--tooltip-background-color);
+  color: var(--header-tooltip-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: calc(var(--border-radius) / 2);
+  font-size: 0.875rem;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  p {
+    margin: 0;
+  }
+}
+
+.tech_info {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--spacing-xl) * 0.75) var(--spacing-lg);
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    color: var(--foreground);
+  }
+}
+
+.tech_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.tech_item {
+  background: var(--tooltip-background-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: calc(var(--border-radius) * 0.75);
+  padding: var(--spacing-lg);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  
+  strong {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--link);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  span {
+    color: var(--header-tooltip-color);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    opacity: 0.8;
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .demo_container {
+    margin: var(--spacing-md);
+    height: 60vh;
+    min-height: 450px;
+  }
+
+  .tech_grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .description {
+    font-size: 0.95rem;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .demo_container {
+    margin: var(--spacing-sm);
+    height: 40vh;
+    min-height: 300px;
+    border-radius: calc(var(--border-radius) / 2);
+  }
+
+  .controls_hint {
+    bottom: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.75rem;
+  }
+
+  .tech_info {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-md);
+    }
+  }
+
+  .tech_grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .tech_item {
+    padding: var(--spacing-md);
+    
+    strong {
+      font-size: 1rem;
+    }
+    
+    span {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .header {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .title {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .demo_container {
+    margin: var(--spacing-xs);
+    height: 35vh;
+    min-height: 250px;
+  }
+
+  .controls_hint {
+    font-size: 0.7rem;
+    padding: var(--spacing-xs);
+  }
+
+  .tech_info {
+    padding: var(--spacing-md) var(--spacing-xs);
+  }
+
+  .tech_item {
+    padding: var(--spacing-sm);
+  }
+}
