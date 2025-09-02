@@ -55,13 +55,13 @@ export const metadata: Metadata = {
     title: "Gleb Shulga - Frontend Developer | React & Next.js Expert",
     description:
       "Frontend Developer with 5+ years of experience specializing in React, Next.js, TypeScript, and performance optimization. Currently at IMMIGRANT INVEST, previously at EPAM Systems.",
-    siteName: "Gleb Shulga Portfolio",
+    siteName: "Gleb Shulga",
     images: [
       {
-        url: "/assets/portrait_light.jpg",
+        url: "/og?page=home",
         width: 1200,
         height: 630,
-        alt: "Gleb Shulga - Full Stack Developer",
+        alt: "Gleb Shulga - Frontend Developer",
       },
     ],
   },
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "Gleb Shulga - Frontend Developer | React & Next.js Expert",
     description:
       "Frontend Developer with 5+ years of experience specializing in React, Next.js, TypeScript, and performance optimization.",
-    images: ["/assets/portrait_light.jpg"],
+    images: ["/og?page=home"],
     creator: "@GlebShulga",
   },
   icons: {
@@ -111,7 +111,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Gleb Shulga",
               url: "https://shulga.vercel.app",
-              image: "https://shulga.vercel.app/assets/portrait_light.jpg",
+              image: "https://shulga.vercel.app/og?page=home",
               sameAs: [
                 "https://www.linkedin.com/in/gleb-shulga/",
                 "https://github.com/GlebShulga",
