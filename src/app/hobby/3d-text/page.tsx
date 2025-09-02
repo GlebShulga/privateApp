@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     url: "https://shulga.vercel.app/hobby/3d-text",
     images: [
       {
-        url: "/assets/og-3d-text.svg",
-        width: 1200,
-        height: 630,
+        url: "/assets/logo-light-bg.png",
+        width: 1024,
+        height: 1024,
         alt: "3D Text Interactive Experience with Three.js",
       },
     ],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "3D Text - Interactive Three.js Experience",
     description: "Explore interactive 3D typography with WebGL rendering, orbital controls, and dynamic lighting.",
-    images: ["/assets/og-3d-text.svg"],
+    images: ["/assets/logo-light-bg.png"],
   },
 };
 

@@ -58,9 +58,9 @@ export const metadata: Metadata = {
     siteName: "Gleb Shulga",
     images: [
       {
-        url: "/assets/og-home.svg",
-        width: 1200,
-        height: 630,
+        url: "/assets/portrait_light.jpg",
+        width: 990,
+        height: 1024,
         alt: "Gleb Shulga - Frontend Developer",
       },
     ],
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "Gleb Shulga - Frontend Developer | React & Next.js Expert",
     description:
       "Frontend Developer with 5+ years of experience specializing in React, Next.js, TypeScript, and performance optimization.",
-    images: ["/assets/og-home.svg"],
+    images: ["/assets/portrait_light.jpg"],
     creator: "@GlebShulga",
   },
   icons: {
@@ -111,7 +111,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Gleb Shulga",
               url: "https://shulga.vercel.app",
-              image: "https://shulga.vercel.app/assets/og-home.svg",
+              image: "https://shulga.vercel.app/assets/portrait_light.jpg",
               sameAs: [
                 "https://www.linkedin.com/in/gleb-shulga/",
                 "https://github.com/GlebShulga",
