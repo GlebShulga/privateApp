@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { ArrowLeft } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowLeft, Maximize, Minimize } from "lucide-react";
 import Link from "next/link";
+import { Tooltip } from "@component/components/Tooltip";
 import styles from "@component/styles/3d-text.module.scss";
 
 export const dynamic = "force-static";
@@ -10,6 +11,34 @@ export const dynamic = "force-static";
 export default function ThreeDTextPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const scriptLoadedRef = useRef(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullscreen = async () => {
+    if (!canvasRef.current) return;
+
+    try {
+      if (!document.fullscreenElement) {
+        await canvasRef.current.requestFullscreen();
+        setIsFullscreen(true);
+      } else {
+        await document.exitFullscreen();
+        setIsFullscreen(false);
+      }
+    } catch (error) {
+      console.error('Error toggling fullscreen:', error);
+    }
+  };
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
+  }, []);
 
   useEffect(() => {
     if (scriptLoadedRef.current || !canvasRef.current) return;
@@ -64,6 +93,14 @@ export default function ThreeDTextPage() {
           <ArrowLeft size={20} />
           Back to Hobbies
         </Link>
+        <Tooltip text={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}>
+          <button 
+            onClick={toggleFullscreen}
+            className={styles.fullscreen_button}
+          >
+            {isFullscreen ? <Minimize size={20} /> : <Maximize size={20} />}
+          </button>
+        </Tooltip>
       </div>
 
 

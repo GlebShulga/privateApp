@@ -48,7 +48,7 @@ export default function HobbyPage() {
   const hobbyItems = [
     {
       title: "3D Text Animation",
-      description: "Interactive 3D  floating molecules created using Three.js. Features dynamic optimization and material effects.",
+      description: "Interactive 3D floating molecules created using Three.js. Features dynamic optimization and material effects.\nBest experienced on desktop.",
       technologies: ["Three.js", "WebGL", "JavaScript"],
       demoPath: "/hobby/3d-text",
       type: "interactive",
@@ -76,8 +76,6 @@ export default function HobbyPage() {
             key={index}
             className={styles.example_card}
             variants={itemVariants}
-            whileHover={isTouchDevice ? {} : { scale: 1.02, y: -5 }}
-            transition={{ duration: 0.3 }}
           >
             <div className={styles.card_content}>
               <div className={styles.example_header}>
@@ -86,7 +84,12 @@ export default function HobbyPage() {
               </div>
               
               <p className={styles.example_description}>
-                {example.description}
+                {example.description.split('\n').map((line, index, array) => (
+                  <span key={index}>
+                    {line}
+                    {index < array.length - 1 && <br />}
+                  </span>
+                ))}
               </p>
 
               <div className={styles.tech_stack}>
