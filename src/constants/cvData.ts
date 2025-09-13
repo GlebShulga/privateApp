@@ -122,7 +122,6 @@ export const experience: Experience[] = [
       "Created components in Storybook and leveraged it as a design system to showcase and document UI components for seamless collaboration across teams.",
       "Set up components in CMS (AEM and ContentStack) to enable efficient content management and streamline the process of updating and maintaining website content.",
       "Collaborated closely with cross-functional teams to identify and address technical issues, ensuring timely delivery of high-quality code.",
-      "Transitioned between Moscow and Georgia offices while maintaining consistent high-quality development standards and project continuity.",
     ],
     technologies: [
       "React",
@@ -132,7 +131,6 @@ export const experience: Experience[] = [
       "i18n",
       "AEM",
       "ContentStack",
-      "TrueFit",
       "Google reCAPTCHA",
     ],
   },
