@@ -52,6 +52,10 @@
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--box-shadow-color);
   transition: all 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 
   &::before {
     content: "";

@@ -6,6 +6,7 @@ import { Calendar, Award, Code, Users, Zap } from "lucide-react";
 
 import { experience } from "../../constants/cvData";
 import { calculateDuration } from "../../utils/calculateDuration";
+import ThreeScene from "../../components/ThreeScene";
 import styles from "../../styles/experience.module.scss";
 
 // Force static generation
@@ -51,13 +52,15 @@ export default function ExperiencePage() {
   ];
 
   return (
-    <motion.div
-      className={styles.container}
-      ref={ref}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={containerVariants}
-    >
+    <>
+      <ThreeScene />
+      <motion.div
+        className={styles.container}
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
       <motion.div className={styles.header} variants={itemVariants}>
         <h1 className={styles.title}>Professional Experience</h1>
         <p className={styles.subtitle}>
@@ -137,6 +140,7 @@ export default function ExperiencePage() {
           </motion.div>
         ))}
       </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 }

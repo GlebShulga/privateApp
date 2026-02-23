@@ -4,8 +4,8 @@ export const headerLinks = [
     url: "/experience",
   },
   {
-    title: "Hobby",
-    url: "/hobby",
+    title: "Open Source",
+    url: "/open-source",
   },
   {
     title: "Download CV",

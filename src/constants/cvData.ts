@@ -29,7 +29,7 @@ export interface Skills {
 
 export const personalInfo: PersonalInfo = {
   name: "Gleb Shulga",
-  title: "Front-end Developer | React | Next | Node",
+  title: "Front-end Developer | React | Three.js | WebGL",
   location: "Spain",
   email: "shulga_gleb@hotmail.com",
   linkedin: "http://www.linkedin.com/in/gleb-shulga",

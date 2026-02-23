@@ -192,6 +192,19 @@ export const Main = (): JSX.Element => {
                 Next.js, and various CMS platforms.
               </motion.p>
               <motion.p variants={itemVariants}>
+                Recently expanded into 3D graphics and scientific visualization
+                — building{" "}
+                <a
+                  href="https://molviewer.bio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MolViewer
+                </a>
+                , an open-source browser-based molecular viewer using React
+                Three Fiber, WebGL2, and custom GLSL shaders.
+              </motion.p>
+              <motion.p variants={itemVariants}>
                 My expertise includes performance optimization (achieving 20%
                 TTFB reduction through code splitting and asset optimization),
                 comprehensive testing strategies (maintaining 80%+ code coverage
