@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import GUI from "lil-gui";
 import gsap from "gsap";
 
 interface ThreeSceneProps {
@@ -16,7 +15,6 @@ export default function ThreeScene({ className }: ThreeSceneProps) {
     renderer?: THREE.WebGLRenderer;
     camera?: THREE.PerspectiveCamera;
     cameraGroup?: THREE.Group;
-    gui?: GUI;
     animationId?: number;
     cleanup?: () => void;
   }>({});
@@ -29,17 +27,13 @@ export default function ThreeScene({ className }: ThreeSceneProps) {
     // Disable Three.js on mobile devices for performance
     const isMobile =
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       ) || window.innerWidth < 768;
     if (isMobile) {
       return;
     }
     const canvas = canvasRef.current;
     const current = sceneRef.current;
-
-    // Debug
-    const gui = new GUI();
-    current.gui = gui;
 
     const parameters = {
       materialColor: "#90D5FF",
@@ -64,11 +58,6 @@ export default function ThreeScene({ className }: ThreeSceneProps) {
       color: parameters.materialColor,
       sizeAttenuation: true,
       size: 0.03,
-    });
-
-    gui.addColor(parameters, "materialColor").onChange(() => {
-      material.color.set(parameters.materialColor);
-      particlesMaterial.color.set(parameters.materialColor);
     });
 
     // Geometries
@@ -109,7 +98,7 @@ export default function ThreeScene({ className }: ThreeSceneProps) {
 
     particlesGeometry.setAttribute(
       "position",
-      new THREE.BufferAttribute(particlesPosition, 3)
+      new THREE.BufferAttribute(particlesPosition, 3),
     );
 
     const particles = new THREE.Points(particlesGeometry, particlesMaterial);
@@ -136,7 +125,7 @@ export default function ThreeScene({ className }: ThreeSceneProps) {
       35,
       sizes.width / sizes.height,
       0.1,
-      100
+      100,
     );
     camera.position.set(0, 0, 6);
     cameraGroup.add(camera);
@@ -386,11 +375,6 @@ export default function ThreeScene({ className }: ThreeSceneProps) {
       // Dispose renderer
       if (current.renderer) {
         current.renderer.dispose();
-      }
-
-      // Dispose GUI
-      if (current.gui) {
-        current.gui.destroy();
       }
     };
 
